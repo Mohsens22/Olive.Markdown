@@ -5,12 +5,12 @@ using System.Text;
 
 namespace Olive.Markdown
 {
-    public class MarkdownEngine
+    public static class MarkdownEngine
     {
         internal static readonly RazorLightEngineBuilder Engine;
-        public void Build()
+        public static void Build()
         {
-            Engine = new RazorLightEngineBuilder()
+            Settings.RazorEngine  = new RazorLightEngineBuilder()
               .UseMemoryCachingProvider()
               .Build();
         }
